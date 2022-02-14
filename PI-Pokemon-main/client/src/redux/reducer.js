@@ -7,7 +7,8 @@ import {
   ORDER_POKEMON,
   FILTER_POKEMON_TYPES,
   FILTER_CREATE,
-  CLEAN_DETAIL
+  CLEAN_DETAIL,
+  CLEAN_ALL_POKEMON,
 } from "./actions";
 
 const initialState = {
@@ -50,7 +51,16 @@ function rootReducer(state = initialState, action) {
       let pokemonOrder;
       switch (action.payload) {
         case "all":
-          pokemonOrder = [...state.allPokemons];
+          pokemonOrder = copyallPokemons.sort(function (a, b) {
+            if (a.id > b.id) {
+              return 1;
+            }
+            if (a.id < b.id) {
+              return -1;
+            }
+            return 0;
+          });
+          break;
         case "asc":
           pokemonOrder = copyallPokemons.sort(function (a, b) {
             if (a.name > b.name) {
@@ -120,6 +130,11 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         detail: [],
+      };
+    case CLEAN_ALL_POKEMON:
+      return {
+        ...state,
+        allPokemons: [],
       };
 
     case FILTER_POKEMON_TYPES:

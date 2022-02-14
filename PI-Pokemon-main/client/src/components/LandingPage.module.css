@@ -1,0 +1,12 @@
+.containerLanding {
+  background-image: url("../image/pokemon-background-pictures-20.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.button {
+  position: relative;
+  text-align: center;
+}

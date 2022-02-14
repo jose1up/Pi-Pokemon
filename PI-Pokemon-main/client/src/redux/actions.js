@@ -8,7 +8,8 @@ export const FILTER_POKEMON_TYPES = "FILTER_POKEMON_TYPES";
 export const ORDER_POKEMON = "ORDER_POKEMON";
 export const GET_TYPES = "GET_TYPES";
 export const FILTER_CREATE = "FILTER_CREATE";
-export const CLEAN_DETAIL = " CLEAN_DETAIL"
+export const CLEAN_DETAIL = " CLEAN_DETAIL";
+export const CLEAN_ALL_POKEMON = "CLEAN_ALL_POKEMON"
 
 export const getAllPokemons = () => {
   return async (dispatch) => {
@@ -83,6 +84,12 @@ export const filterCreate = (payload) => {
 export const cleanDetail = () => {
   return (dispatch) => {
     dispatch({ type: CLEAN_DETAIL });
+  };
+};
+
+export const cleanALlPokemon = () => {
+  return (dispatch) => {
+    dispatch({ type: CLEAN_ALL_POKEMON });
   };
 };
 

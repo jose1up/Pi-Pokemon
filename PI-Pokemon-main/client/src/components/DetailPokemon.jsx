@@ -26,7 +26,7 @@ export default function DetailPokemon(props) {
               key={p.id}
               id={p.id}
               name={p.name}
-              types={p.types.map(p=>p.name)|| p.types} 
+              types={p.types.map((p) => (p.name ? p.name : p))} 
               img={
                 p.img
                   ? p.img

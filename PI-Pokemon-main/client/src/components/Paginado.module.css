@@ -1,0 +1,10 @@
+.ul {
+  display: flex;
+  justify-content: center;
+}
+.div{
+ padding: 0.5rem;
+}
+ .a{
+   text-decoration: solid;
+ }

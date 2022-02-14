@@ -16,7 +16,7 @@ export default function FilterPokemon() {
   return (
     <div>
       <select onChange={(e) => handleFilterType(e)}>
-        <option value="all">all</option>
+        <option value="all">Types</option>
         {types.map((e) => (
           <option key={e.id} value={e.name}>
             {e.name}

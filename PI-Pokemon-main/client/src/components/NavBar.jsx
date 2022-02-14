@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../image/pngegg.png";
-import { cleanDetail } from "../redux/actions";
+import { cleanALlPokemon, cleanDetail, getAllPokemons } from "../redux/actions";
 import style from "./NavBar.module.css";
 
 export const NavBar = () => {
@@ -10,17 +10,21 @@ export const NavBar = () => {
 
   function handleClean() {
     dispatch(cleanDetail());
+    dispatch(cleanALlPokemon());
+    dispatch(getAllPokemons());
   }
   return (
-    <header>
+    <header className={style.header}>
+      <Link to="/Home">
+        <span className={style.home} onClick={handleClean}>
+          Home
+        </span>
+      </Link>
       <Link to="/Home">
         <img className={style.logo} src={logo} alt="Logo pokemon" />
       </Link>
-      <Link to="/Home">
-        <span onClick={handleClean}>Home</span>
-      </Link>
       <Link to="/CreatePokemon">
-        <span>Create Pokemon </span>
+        <span className={style.createPokemon}>Create Pokemon </span>
       </Link>
     </header>
   );

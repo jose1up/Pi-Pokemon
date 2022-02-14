@@ -6,19 +6,24 @@ import SearchBar from "./SearchBar";
 import Paginado from "./Paginado";
 import FilterPokemon from "./FilterPokemon";
 import FilterPokemoCrate from "./FilterPokemoCrate";
-
+import s from "./Home.module.css";
 export const Home = () => {
   return (
     <div>
       <NavBar />
-      <SearchBar />
-      <OrderPokemon />
-      <FilterPokemoCrate />
-      <FilterPokemon />
-      <Paginado />
+      <div className={s.div}>
+        <OrderPokemon />
+        <FilterPokemoCrate />
+        <FilterPokemon />
+        <SearchBar />
+      </div>
+      <div>
+        <Paginado />
 
-      <h3>soy home</h3>
-      <Pokemons />
+        <div>
+          <Pokemons />
+        </div>
+      </div>
     </div>
   );
 };

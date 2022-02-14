@@ -1,4 +1,15 @@
-.logo{
-    height: 7rem;
-    width: 12rem;
+.logo {
+  position: center;
+  align-items: center;
+  height: 85px;
+  width: 150px;
+}
+.home {
+  align-content: flex-end;
+  padding: 10rem;
+}
+
+.createPokemon {
+  align-content: flex-start;
+  padding: 10rem;
 }

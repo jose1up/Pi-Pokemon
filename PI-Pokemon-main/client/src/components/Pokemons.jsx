@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getAllPokemons } from "../redux/actions";
 import CardPokemon from "./CardPokemon";
 import Paginado from "./Paginado";
+import s from "./Pokemons.module.css";
 
 export default function Pokemons() {
   const dispatch = useDispatch();
@@ -27,29 +28,28 @@ export default function Pokemons() {
   return (
     <div>
       <Paginado
-      charactersPerPage ={charactersPerPage}
-      allPokemons = {allPokemons.length}
-      paginado={paginado}
-
-
+        charactersPerPage={charactersPerPage}
+        allPokemons={allPokemons.length}
+        paginado={paginado}
       />
-
-      {currenCharacters &&
-        currenCharacters.map((p) => {
-          return (
-            <CardPokemon
-              key={p.id}
-              name={p.name}
-              img={
-                p.img
-                  ? p.img
-                  : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
-              }
-              types={p.types.map((p) => (p.name ? p.name : p))}
-              id={p.id}
-            />
-          );
-        })}
+      <div className={s.div}>
+        {currenCharacters &&
+          currenCharacters.map((p) => {
+            return (
+              <CardPokemon
+                key={p.id}
+                name={p.name}
+                img={
+                  p.img
+                    ? p.img
+                    : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+                }
+                types={p.types.map((p) => (p.name ? p.name : p))}
+                id={p.id}
+              />
+            );
+          })}
+      </div>
     </div>
   );
 }

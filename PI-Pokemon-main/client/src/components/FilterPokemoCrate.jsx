@@ -11,6 +11,7 @@ export default function FilterPokemoCrate() {
   return (
     <div>
       <select onChange={(e) => handleFilterCreate(e)}>
+        <option>Filter ... </option>
         <option value="all">all</option>
         <option value="Created">Created</option>
         <option value="API">API</option>

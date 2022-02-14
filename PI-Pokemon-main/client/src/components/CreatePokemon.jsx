@@ -58,7 +58,7 @@ export default function CreatePokemon() {
     e.preventDefault();
     setpokemon({
       ...pokemon,
-      types: pokemon.types.filter((a) => a != e.target.name),
+      types: pokemon.types.filter((a) => a !== e.target.name),
     });
   }
 

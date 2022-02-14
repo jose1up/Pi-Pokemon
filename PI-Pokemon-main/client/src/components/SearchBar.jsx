@@ -21,14 +21,9 @@ export default function SearchBar() {
         <input
           type="text"
           onChange={handleInputChange}
-          placeholder="Buscar pokemon..."
+          placeholder="Search pokemon..."
         />
-        <button
-          type="submit"
-        >
-          {" "}
-          Buscar{" "}
-        </button>
+        <button type="submit"> Search </button>
       </form>
     </div>
   );

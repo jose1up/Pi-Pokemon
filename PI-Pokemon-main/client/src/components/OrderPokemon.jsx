@@ -10,6 +10,7 @@ export default function () {
   return (
     <div>
       <select name="select" onChange={onSelectsChange}>
+        <option>Sort</option>
         <option value="all">all</option>
         <option value="asc">Ascendente</option>
         <option value="des">Descendente</option>

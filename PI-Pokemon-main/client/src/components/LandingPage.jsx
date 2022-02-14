@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ImgLanding from "../image/pokemon-background-pictures-20.jpg";
+import s from "./LandingPage.module.css";
 
 export const LandingPage = () => {
   return (
-    <div>
-      <h1> Hola soy LandingPage</h1>{" "}
+    <div className={s.containerLanding}>
       <Link to={"/Home"}>
-        {" "}
-       <img src={ImgLanding} alt="Imagen de la Landing" /> 
+        <button className={s.button}>ingresar</button>
       </Link>
-      
     </div>
   );
 };
