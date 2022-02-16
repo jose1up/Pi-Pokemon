@@ -7,21 +7,21 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-
 function validate(pokemon) {
-  let URL =  /^(www)?.+\.[a-z]{2,6}(\.[a-z]{2,6})?.+\.[a-z]{2,4}$/
+  let URL = /^(www)?.+\.[a-z]{2,6}(\.[a-z]{2,6})?.+\.[a-z]{2,4}$/;
   let regex = /^(?![ .]+$)[a-zA-Z .]*$/gm;
- 
+
   let errors = {};
   if (!pokemon.name) {
     errors.name = "Se requiere un nombre";
   }
-  if(!regex.test(pokemon.name)){
-    errors.name = "el nombre no debe tener caracteres";
-
-  }
-  if (!URL.test(pokemon.img)){
+  if (!pokemon.img) {
+    errors.img = "debes agregar una imagen url o se agregara una por defecto";
+  } else if (!URL.test(pokemon.img)) {
     errors.img = "la imagen tiene que ser una url ";
+  }
+  if (!regex.test(pokemon.name)) {
+    errors.name = "el nombre no debe tener caracteres";
   }
 
   return errors;
