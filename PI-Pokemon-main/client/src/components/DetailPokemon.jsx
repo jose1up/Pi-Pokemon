@@ -6,16 +6,23 @@ import { getPokemonDetail } from "../redux/actions";
 import CharacterCard from "./CharacterCard";
 import { useParams } from "react-router-dom";
 import { NavBar } from "./NavBar";
+import PaginaDeCarga2 from "./PaginaDeCarga2";
+import { useState } from "react";
 
 
 export default function DetailPokemon(props) {
+  const [carga, setCarga] = useState(true);
   const { id } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getPokemonDetail(id));
+    dispatch(getPokemonDetail(id)).then(() => setCarga(false));
   }, []);
 
   const detail = useSelector((state) => state.detail);
+
+  if (carga) {
+    return <PaginaDeCarga2 />;
+  }
 
   return (
     <div>
@@ -27,7 +34,7 @@ export default function DetailPokemon(props) {
               key={p.id}
               id={p.id}
               name={p.name}
-              types={p.types.map((p) => (p.name ? p.name : p))} 
+              types={p.types.map((p) => (p.name ? p.name : p))}
               img={
                 p.img
                   ? p.img

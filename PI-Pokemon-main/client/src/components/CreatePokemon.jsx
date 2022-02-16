@@ -16,7 +16,7 @@ function validate(pokemon) {
     errors.name = "Se requiere un nombre";
   }
   if (!pokemon.img) {
-    errors.img = "debes agregar una imagen url o se agregara una por defecto";
+    errors.img = "Debes agregar una imagen url o se agregara una por defecto";
   } else if (!URL.test(pokemon.img)) {
     errors.img = "la imagen tiene que ser una url ";
   }

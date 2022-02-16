@@ -4,7 +4,7 @@ import { LandingPage } from "./components/LandingPage";
 import { Home } from "./components/Home";
 import DetailPokemon from "./components/DetailPokemon";
 import CreatePokemon from "./components/CreatePokemon";
-import PaginaDeCarga from "./components/PaginaDeCarga";
+import PaginaDeCarga from "./components/PaginaDeCarga2";
 
 function App() {
   return (

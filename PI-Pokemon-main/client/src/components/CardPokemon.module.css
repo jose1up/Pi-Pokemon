@@ -21,6 +21,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border-radius: 1.5rem;
 }
 .button{
     padding: 10px 40px;
@@ -41,6 +42,7 @@
   width: 300px;
   margin: 10px;
   transition: all 300ms;
+  border-radius: 3rem;
 }
 .card:hover {
   width: 350px;
