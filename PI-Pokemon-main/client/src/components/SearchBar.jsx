@@ -13,6 +13,7 @@ export default function SearchBar() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(findPokemon(name));
+
   };
 
   return (

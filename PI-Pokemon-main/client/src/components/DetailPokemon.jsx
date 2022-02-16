@@ -7,6 +7,7 @@ import CharacterCard from "./CharacterCard";
 import { useParams } from "react-router-dom";
 import { NavBar } from "./NavBar";
 
+
 export default function DetailPokemon(props) {
   const { id } = useParams();
   const dispatch = useDispatch();

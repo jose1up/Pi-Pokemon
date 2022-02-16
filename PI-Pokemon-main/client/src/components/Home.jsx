@@ -7,9 +7,10 @@ import Paginado from "./Paginado";
 import FilterPokemon from "./FilterPokemon";
 import FilterPokemoCrate from "./FilterPokemoCrate";
 import s from "./Home.module.css";
+
 export const Home = () => {
   return (
-    <div>
+    <div className={s.home}>
       <NavBar />
       <div className={s.div}>
         <OrderPokemon />
@@ -17,7 +18,7 @@ export const Home = () => {
         <FilterPokemon />
         <SearchBar />
       </div>
-      <div>
+      <div className={s.div2}>
         <Paginado />
 
         <div>

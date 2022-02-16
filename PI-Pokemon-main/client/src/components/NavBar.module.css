@@ -2,7 +2,7 @@
   position: center;
   align-items: center;
   height: 85px;
-  width: 150px;
+  width: 200px;
 }
 .home {
   align-content: flex-end;
@@ -12,4 +12,7 @@
 .createPokemon {
   align-content: flex-start;
   padding: 10rem;
+}
+.header{
+  background-color: #30a7d7;
 }

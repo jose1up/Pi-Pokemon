@@ -12,8 +12,8 @@ export default function () {
       <select name="select" onChange={onSelectsChange}>
         <option>Sort</option>
         <option value="all">all</option>
-        <option value="asc">Ascendente</option>
-        <option value="des">Descendente</option>
+        <option value="asc">A-Z</option>
+        <option value="des">Z-A</option>
         <option value="strengthDes">Max Fuerza</option>
         <option value="strengthAsc">Min Fuerza</option>
       </select>

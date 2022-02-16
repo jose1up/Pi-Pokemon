@@ -1,4 +1,5 @@
 .div {
   display: flex;
   flex-wrap: wrap;
+  background-image: url("../image/Zona_Safari_\(Kanto\)_Zona_central.png");
 }

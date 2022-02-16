@@ -1,9 +1,8 @@
 import React from "react";
-import s from "./PaginaDeCarga.module.css"
+import imgen from "../image/CharizarVolando.gif"
+import s from "./PaginaDeCarga.module.css";
 export default function PaginaDeCarga() {
-  return (
-    <div className={s.pokebola} >
-      <p>cargado</p>
-    </div>
-  );
+  return <div className={s.div}>
+    <img className={s.img} src={imgen} alt="" />
+  </div>;
 }

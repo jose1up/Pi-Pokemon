@@ -7,16 +7,20 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+
 function validate(pokemon) {
+  let URL =  /^(www)?.+\.[a-z]{2,6}(\.[a-z]{2,6})?.+\.[a-z]{2,4}$/
+  let regex = /^(?![ .]+$)[a-zA-Z .]*$/gm;
+ 
   let errors = {};
   if (!pokemon.name) {
     errors.name = "Se requiere un nombre";
   }
-  if (
-    !/^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/.test(
-      pokemon.img
-    )
-  ) {
+  if(!regex.test(pokemon.name)){
+    errors.name = "el nombre no debe tener caracteres";
+
+  }
+  if (!URL.test(pokemon.img)){
     errors.img = "la imagen tiene que ser una url ";
   }
 
@@ -180,7 +184,9 @@ export default function CreatePokemon() {
         {pokemon.types.map((e) => (
           <div key={e}>
             {e}
-            <button name={e} onClick={(e)=>handleDelete(e)}>X</button>
+            <button name={e} onClick={(e) => handleDelete(e)}>
+              X
+            </button>
           </div>
         ))}
       </div>

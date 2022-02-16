@@ -3,13 +3,15 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllPokemons } from "../redux/actions";
 import CardPokemon from "./CardPokemon";
+import PaginaDeCarga from "./PaginaDeCarga";
 import Paginado from "./Paginado";
 import s from "./Pokemons.module.css";
 
 export default function Pokemons() {
   const dispatch = useDispatch();
+  const [carga, setCarga] = useState(true);
   React.useEffect(() => {
-    dispatch(getAllPokemons());
+    dispatch(getAllPokemons()).then(() => setCarga(false));
   }, []); // me traigo la acion que deseo dispachar de mi acction
   const allPokemons = useSelector((state) => state.allPokemons); // me traigo el estado global de reducer
 
@@ -24,6 +26,10 @@ export default function Pokemons() {
   const paginado = (pageNumbers) => {
     setCurrentPage(pageNumbers);
   };
+
+  if (carga) {
+    return <PaginaDeCarga />;
+  }
 
   return (
     <div>
