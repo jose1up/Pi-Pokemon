@@ -1,0 +1,114 @@
+.conteiner {
+  background: url("../image/pokemon-espada-y-escudo.-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+* {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Ubuntu, sans-serif;
+}
+
+.form {
+  width: 75%;
+  height: 85%;
+  margin-left: 12%;
+  background-color: hsla(108, 78%, 91%, 0.452);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+  margin-top: 3rem;
+  border: 0.3rem solid black;
+  border-radius: 1.5rem;
+  box-shadow: 2px 2px 2px rgb(82, 76, 76);
+}
+
+.input {
+  border: 0.2rem solid rgba(90, 86, 86, 0.486);
+  border-radius: 0.5rem;
+  background-color: rgba(55, 124, 185, 0.616);
+  color: white;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.errorsName {
+  color: rgb(255, 0, 0);
+  font-size: small;
+}
+
+.errorsImg {
+  border: 1px 1px 1px solid black;
+  font-weight: bold;
+  color: rgb(238, 236, 97);
+  font-size: small;
+}
+
+.select {
+  border: 0.2rem solid rgba(90, 86, 86, 0.486);
+  border-radius: 0.5rem;
+  background-color: rgba(55, 124, 185, 0.616);
+  color: white;
+  margin-top: 1rem;
+  width: 11rem;
+}
+
+.conteinerButton {
+  margin-top: 2rem;
+}
+
+.btnAtras {
+  width: 5rem;
+  margin-right: 15rem;
+  border: 0.2rem solid rgba(90, 86, 86, 0.486);
+  border-radius: 0.5rem;
+  background-color: rgba(55, 124, 185, 0.616);
+  color: white;
+}
+
+.btnAtras:hover {
+  background-color: white;
+  color: rgba(55, 124, 185, 0.616)
+}
+
+.btnCrear {
+  width: 5rem;
+  border: 0.2rem solid rgba(90, 86, 86, 0.486);
+  border-radius: 0.5rem;
+  background-color: rgba(55, 124, 185, 0.616);
+  color: white;
+}
+
+.btnCrear:hover {
+  background-color: white;
+  color: rgba(55, 124, 185, 0.616)
+}
+
+.types{
+  border: 0.2rem solid rgba(90, 86, 86, 0.486);
+  border-radius:0.5rem;
+  background: rgba(255, 255, 255, 0.432);
+  max-width: max-content;
+  margin-left: 11rem;
+}
+
+.typesBtn{
+  margin-left: 1rem;
+  color: white;
+  background-color: rgb(216, 79, 79);
+  border-radius: 0.2rem;
+  width: 1rem;
+}
+
+.typesBtn:hover{  
+  color: rgb(216, 79, 79);
+  background-color: white; 
+}
+
+

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import s from "./CreatePokemon.module.css";
 
 function validate(pokemon) {
   let URL = /^(www)?.+\.[a-z]{2,6}(\.[a-z]{2,6})?.+\.[a-z]{2,4}$/;
@@ -13,7 +14,7 @@ function validate(pokemon) {
 
   let errors = {};
   if (!pokemon.name) {
-    errors.name = "Se requiere un nombre";
+    errors.name = "(*)Se requiere un nombre";
   }
   if (!pokemon.img) {
     errors.img = "Debes agregar una imagen url o se agregara una por defecto";
@@ -21,7 +22,7 @@ function validate(pokemon) {
     errors.img = "la imagen tiene que ser una url ";
   }
   if (!regex.test(pokemon.name)) {
-    errors.name = "el nombre no debe tener caracteres";
+    errors.name = "(*)el nombre no debe tener caracteres especiale ni nuemeros";
   }
 
   return errors;
@@ -98,98 +99,108 @@ export default function CreatePokemon() {
   }
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <label>Nombre:</label>
+    <div className={s.conteiner}>
+      <form className={s.form} onSubmit={onSubmit}>
+        <label className={s.label}>Nombre</label>
         <input
+          className={s.input}
           id="name"
           name="name"
           type="text"
           value={pokemon.name}
           onChange={onInputChange}
         ></input>
-        {errors.name && <p className="error"> {errors.name}</p>}
-        <label>Imagen: </label>
+        {errors.name && <p className={s.errorsName}> {errors.name}</p>}
+        <label className={s.label}>Imagen </label>
         <input
+          className={s.input}
           onChange={onInputChange}
           name="img"
           type="text"
           value={pokemon.img}
-          className="input"
         />
-        {errors.img && <p className="error"> {errors.img}</p>}
-        <label>Fuerza: </label>
+        {errors.img && <p className={s.errorsImg}> {errors.img}</p>}
+        <label className={s.label}>Fuerza </label>
         <input
+          className={s.input}
           onChange={onInputChange}
           name="strength"
           type="number"
+          min="0"
           value={pokemon.strength}
-          className="input"
         />
-        <label>Defensa: </label>
+        <label className={s.label}>Defensa </label>
         <input
+          className={s.input}
           onChange={onInputChange}
           name="defense"
           type="number"
+          min="0"
           value={pokemon.defense}
-          className="input"
         />
-        <label>Velocidad: </label>
+        <label className={s.label}>Velocidad </label>
         <input
+          className={s.input}
           onChange={onInputChange}
           name="speed"
           type="number"
+          min="0"
           value={pokemon.speed}
-          className="input"
         />
-        <label>Altura: </label>
-        <input
-          onChange={onInputChange}
-          name="height"
-          type="number"
-          value={pokemon.height}
-          className="input"
-        />
-        <label>Vida: </label>
+        <label className={s.label}>Vida </label>
         <input
           onChange={onInputChange}
           name="life"
           type="number"
+          min="0"
           value={pokemon.life}
-          className="input"
+          className={s.input}
         />
-        <label>Peso: </label>
+        <label className={s.label}>Altura </label>
+        <input
+          onChange={onInputChange}
+          name="height"
+          type="number"
+          min="0"
+          value={pokemon.height}
+          className={s.input}
+        />
+        <label className={s.label}>Peso </label>
         <input
           onChange={onInputChange}
           name="weight"
           type="number"
+          min="0"
           value={pokemon.weight}
-          className="input"
+          className={s.input}
         />
-        <div className="types-s">
-          <select onChange={handleSelect}>
+        <div>
+          <select className={s.select} onChange={handleSelect}>
             {types.map((e) => (
               <option key={e.id} value={e.name}>
                 {e.name}
               </option>
             ))}
           </select>
-        </div>
-        <Link to="/home">
-          <button type="submit">Atrás</button>
-        </Link>
-        <button type="submit">Crear</button>
-      </form>{" "}
-      <div>
-        {pokemon.types.map((e) => (
-          <div key={e}>
-            {e}
-            <button name={e} onClick={(e) => handleDelete(e)}>
-              X
-            </button>
+          <div>
+            {pokemon.types.map((e) => (
+              <div className={s.types} key={e}>
+                {e}
+                <button className={s.typesBtn} name={e} onClick={(e) => handleDelete(e)}>
+                  X
+                </button>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+
+          <div className={s.conteinerButton}>
+            <Link to="/home">
+              <button type="submit" className={s.btnAtras}>Atrás</button>
+            </Link>
+            <button type="submit"  className={s.btnCrear}>Crear</button>
+          </div>
+        </div>
+      </form>{" "}
     </div>
   );
 }
