@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterPokemonTypes, getTipes } from "../redux/actions";
+import s from "./FilterPokemon.module.css"
 
 export default function FilterPokemon() {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ export default function FilterPokemon() {
 
   return (
     <div>
-      <select onChange={(e) => handleFilterType(e)}>
+      <select className={s.contenerdor} onChange={(e) => handleFilterType(e)}>
         <option value="all">Types</option>
         {types.map((e) => (
           <option key={e.id} value={e.name}>

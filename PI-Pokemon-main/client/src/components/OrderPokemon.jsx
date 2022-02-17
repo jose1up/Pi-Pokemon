@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { orderPokemon } from "../redux/actions";
+import s from "./OrderPokemon.module.css"
 
 export default function () {
   const dispatch = useDispatch();
@@ -9,7 +10,7 @@ export default function () {
   }
   return (
     <div>
-      <select name="select" onChange={onSelectsChange}>
+      <select className={s.contenedor} name="select" onChange={onSelectsChange}>
         <option>Sort</option>
         <option value="all">all</option>
         <option value="asc">A-Z</option>

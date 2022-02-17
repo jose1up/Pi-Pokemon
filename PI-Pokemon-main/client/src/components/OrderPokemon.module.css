@@ -1,0 +1,10 @@
+.contenedor {
+  border-radius: 0.5rem;
+  top: -30px;
+  left: -30px;
+  padding: 7px 21px;
+  background-color: #444444;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
