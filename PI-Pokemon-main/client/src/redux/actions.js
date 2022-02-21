@@ -65,7 +65,9 @@ export const getTipes = () => {
     try {
       const { data } = await axios.get("http://localhost:3001/types");
       dispatch({ type: GET_TYPES, payload: data });
-    } catch (error) {}
+    } catch (error) {
+      console.log(error)
+    }
   };
 };
 export const filterPokemonTypes = (payload) => {

@@ -142,7 +142,11 @@ function rootReducer(state = initialState, action) {
       let filterPokemonTypes =
         action.payload === "all"
           ? allPokemon
-          : allPokemon.filter((el) => el.types.includes(action.payload));
+          : allPokemon.filter((el) =>
+              el.createdAt
+                ? el.types.map((p) => p.name === action.payload)
+                : el.types.includes(action.payload)
+            );
 
       return {
         ...state,
