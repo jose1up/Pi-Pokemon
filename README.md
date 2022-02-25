@@ -17,3 +17,13 @@ Reemplazar `usuariodepostgres` y `passwordDePostgres` con tus propias credencial
 Adicionalmente será necesario que creen desde psql una base de datos llamada `pokemon`
 
 El contenido de `client` fue creado usando: Create React App.
+
+##Funcionalidades 
+
+ - Buscar pokemons
+ - Filtrarlos / Ordenarlos
+ - Crear nuevos pokemons
+
+## imagenes 
+
+
