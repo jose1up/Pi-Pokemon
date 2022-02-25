@@ -25,9 +25,9 @@ El contenido de `client` fue creado usando: Create React App.
  - Crear nuevos pokemons
 
 ## imagenes 
-<div align="center">
+<p align="center">
 <img src="https://i.postimg.cc/L6Sp30xk/Snapshot.png" alt="cover" />
-</div>
+</p>
 <div align="center">
 <img src="https://i.postimg.cc/hP0qybYk/Snapshot-1.png" alt="cover" />
 </div>
