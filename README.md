@@ -26,7 +26,7 @@ El contenido de `client` fue creado usando: Create React App.
 
 ## imagenes 
 <div align="center">
-<img width="100%" height = "250px" src="https://i.postimg.cc/L6Sp30xk/Snapshot.png" alt="cover" />
+<img src="https://i.postimg.cc/L6Sp30xk/Snapshot.png" alt="cover" />
 </div>
 
 
