@@ -28,6 +28,14 @@ El contenido de `client` fue creado usando: Create React App.
 <div align="center">
 <img src="https://i.postimg.cc/L6Sp30xk/Snapshot.png" alt="cover" />
 </div>
+<div align="center">
+<img src="https://i.postimg.cc/hP0qybYk/Snapshot-1.png" alt="cover" />
+</div>
+<div align="center">
+<img src="https://i.postimg.cc/NjfvW2q5/Snapshot-2.png" alt="cover" />
+</div>
+
+
 
 
 
